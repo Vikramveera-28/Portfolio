@@ -1,0 +1,138 @@
+.anchor{
+    text-decoration: none;
+}
+.icon{
+    font-size: 30px;
+    color: blue;
+}
+.page-1{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, white -90%,rgb(44, 44, 44) 30%, black 90%);
+}
+.page-2,
+.page-3,
+.page-4
+.page-5
+{
+    width: 100vw;
+    height: auto;
+    padding: 10px;
+}
+
+.img{
+    filter: drop-shadow('5px');
+}
+
+header > nav > ul{
+    margin-left: auto;
+    font-size: 20px;
+}
+header{
+    position: sticky;
+}
+main{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.solid{
+    border-top: 2px solid black;
+}
+
+.profile{
+    overflow: hidden;
+    border-radius: 30px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-4 > .row > div > div{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+    transition: background-color 1s,
+                color 1s,
+                scale .5s;
+}
+.page-4 > .row > div > div:hover{
+    color: whitesmoke;
+    background-color: blue;
+    scale: 1.02;
+}
+.page-4 > .row > div > div > p{
+    font-size: 17px;
+    padding-top: 25px;
+}
+
+
+
+
+
+
+
+
+.property{
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none;
+    color: wheat;
+    font-size: xx-large;
+    position: relative;
+    width: 3em;
+    aspect-ratio: 1;
+    font-size: 1.5rem;
+}
+.property::after{
+    position: absolute;
+    z-index: -1;
+    inset: -3px;
+    content: "";
+    background: transparent;
+    border-radius: inherit;
+    background: conic-gradient(red var(--fill), transparent var(--fill));
+    transition: --fill 0.6s ease-in-out;
+}
+@property --fill {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
+.property:hover{
+    color: red;
+    --fill: 50%;
+}
+
+
+
+
+.skill-icon{
+    display: none;
+    width: 100%;
+}
+.skill-box:hover{
+    .skill-text{
+        display: none;
+    }
+    .skill-icon{
+        display: flex;
+    }
+}
+.textLight{
+    background-color: white;
+    border-radius: 50%;
+}
+
+
