@@ -10,15 +10,18 @@
     background-image: linear-gradient(to bottom, white -90%,rgb(44, 44, 44) 30%, black 90%);
 }
 .page-2,
-.page-3,
-.page-4
-.page-5
+.page-3
 {
     width: 100vw;
     height: auto;
     padding: 10px;
 }
-
+.page-4
+.page-5{
+    width: 100vw;
+    height: auto;
+    padding-block: 100px;
+}
 .img{
     filter: drop-shadow('5px');
 }
@@ -37,6 +40,84 @@ main{
     justify-content: space-between;
     align-items: center;
 }
+.main-text1{
+    animation: box-left .5s .1s linear;
+}
+.main-text2{
+    animation: box-left .5s .3s linear;
+}
+.main-text3{
+    animation: box-left .5s .5s linear;
+}
+.main-text4{
+    animation: box-left .5s .7s linear;
+}
+.main-text5{
+    animation: box-left .5s .9s linear;
+}
+.main-image{
+    animation: box-right .5s .1s linear;
+}
+.skill-box{
+    animation: box-left linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.contactPage{
+    animation: contact .5s .1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.experiencebox{
+    overflow: hidden;
+    animation: box-right .5s .1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.skill-opacity{
+    animation: opacity .5s .1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+@keyframes contact {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes box-left{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes box-right {
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes opacity {
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+
 
 .solid{
     border-top: 2px solid black;
@@ -53,20 +134,41 @@ main{
     align-items: center;
 }
 
-.page-4 > .row > div > div{
-    border: 1px solid black;
+.card{
     border-radius: 20px;
-    padding: 10px;
+    border-radius: 10px;
     background-color: whitesmoke;
     transition: background-color 1s,
                 color 1s,
                 scale .5s;
 }
-.page-4 > .row > div > div:hover{
-    color: whitesmoke;
-    background-color: blue;
-    scale: 1.02;
+.card-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+.card-box h5{
+    color: whitesmoke;
+    transition: all 1s;
+}
+.card-box p{
+    display: none;
+    transition: all 1s;
+}
+.card:hover{  
+    scale: 1.12;
+    .card-box h5{
+        opacity: 1;
+    }
+    .card-box p{
+        display: block;
+        color: whitesmoke;
+    }
+}
+/* .page-4 > .row > div > div:hover{
+    color: whitesmoke;
+} */
 .page-4 > .row > div > div > p{
     font-size: 17px;
     padding-top: 25px;
