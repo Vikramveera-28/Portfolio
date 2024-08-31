@@ -49,6 +49,36 @@ main{
 .main-text3{
     animation: box-left .5s .5s linear;
 }
+.main-text3::after{
+    content: 'F';
+    animation: letter 1.5s linear alternate infinite;
+    animation-fill-mode: forwards;
+    border-right: 1px solid whitesmoke;
+    padding-right: 2px;
+}
+@keyframes letter {
+    0%{content: 'F';}
+    5%{content: 'F';}
+    10%{content: 'FU';}
+    15%{content: 'FUL';}
+    20%{content: 'FULL';}
+    25%{content: 'FULL ';}
+    30%{content: 'FULL S';}
+    35%{content: 'FULL ST';}
+    40%{content: 'FULL STA';}
+    45%{content: 'FULL STAC';}
+    50%{content: 'FULL STACK';}
+    55%{content: 'FULL STACK ';}
+    60%{content: 'FULL STACK D';}
+    65%{content: 'FULL STACK DE';}
+    70%{content: 'FULL STACK DEV';}
+    75%{content: 'FULL STACK DEVE';}
+    80%{content: 'FULL STACK DEVEL';}
+    85%{content: 'FULL STACK DEVELO';}
+    90%{content: 'FULL STACK DEVELOP';}
+    95%{content: 'FULL STACK DEVELOPE';}
+    100%{content: 'FULL STACK DEVELOPER';}
+}
 .main-text4{
     animation: box-left .5s .7s linear;
 }
@@ -63,23 +93,29 @@ main{
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
-.contactPage{
-    animation: contact .5s .1s linear;
+.contactPage, .skill-opacity{
+    animation: opacity linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
+}
+.about-text{
+    overflow: hidden;
+    animation: box-right linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.profile-image{
+    animation: box-left linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 .experiencebox{
     overflow: hidden;
-    animation: box-right .5s .1s linear;
+    animation: box-right linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
-.skill-opacity{
-    animation: opacity .5s .1s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-}
-@keyframes contact {
+@keyframes box-top {
     from{
         transform: translateY(100px);
         opacity: 0;
@@ -91,7 +127,7 @@ main{
 }
 @keyframes box-left{
     from{
-        transform: translateX(-100px);
+        transform: translateX(-200px);
         opacity: 0;
     }
     to{
@@ -101,7 +137,7 @@ main{
 }
 @keyframes box-right {
     from{
-        transform: translateX(100px);
+        transform: translateX(200px);
         opacity: 0;
     }
     to{
@@ -173,49 +209,6 @@ main{
     font-size: 17px;
     padding-top: 25px;
 }
-
-
-
-
-
-
-
-
-.property{
-    background: black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-decoration: none;
-    color: wheat;
-    font-size: xx-large;
-    position: relative;
-    width: 3em;
-    aspect-ratio: 1;
-    font-size: 1.5rem;
-}
-.property::after{
-    position: absolute;
-    z-index: -1;
-    inset: -3px;
-    content: "";
-    background: transparent;
-    border-radius: inherit;
-    background: conic-gradient(red var(--fill), transparent var(--fill));
-    transition: --fill 0.6s ease-in-out;
-}
-@property --fill {
-    syntax: '<percentage>';
-    inherits: true;
-    initial-value: 0%;
-}
-.property:hover{
-    color: red;
-    --fill: 50%;
-}
-
 
 
 
