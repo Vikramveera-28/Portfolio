@@ -127,7 +127,7 @@ main{
 }
 @keyframes box-left{
     from{
-        transform: translateX(-200px);
+        transform: translateX(-100px);
         opacity: 0;
     }
     to{
@@ -137,7 +137,7 @@ main{
 }
 @keyframes box-right {
     from{
-        transform: translateX(200px);
+        transform: translateX(100px);
         opacity: 0;
     }
     to{
