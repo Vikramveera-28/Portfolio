@@ -88,7 +88,7 @@ main{
 .main-image{
     animation: box-right .5s .1s linear;
 }
-.skill-box{
+.skill-box, .profile-image{
     animation: box-left linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
@@ -98,18 +98,7 @@ main{
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
-.about-text{
-    overflow: hidden;
-    animation: box-right linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-}
-.profile-image{
-    animation: box-left linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-}
-.experiencebox{
+.about-text, .experiencebox{
     overflow: hidden;
     animation: box-right linear;
     animation-timeline: view();
@@ -137,7 +126,7 @@ main{
 }
 @keyframes box-right {
     from{
-        transform: translateX(100px);
+        transform: translateX(40px);
         opacity: 0;
     }
     to{
