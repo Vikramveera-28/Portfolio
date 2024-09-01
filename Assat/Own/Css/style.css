@@ -181,7 +181,7 @@ main{
     display: none;
     transition: all 1s;
 }
-.card:hover{  
+.page-4 div div .card:hover{  
     scale: 1.12;
     .card-box h5{
         opacity: 1;
