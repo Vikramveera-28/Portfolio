@@ -202,16 +202,10 @@ main{
 
 
 .skill-icon{
-    display: none;
     width: 100%;
 }
-.skill-box:hover{
-    .skill-text{
-        display: none;
-    }
-    .skill-icon{
-        display: flex;
-    }
+.skill-number{
+    display: none;
 }
 .textLight{
     background-color: white;
