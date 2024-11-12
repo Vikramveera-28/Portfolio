@@ -213,3 +213,22 @@ main{
 }
 
 
+.bootstrap-react{
+    mix-blend-mode: hue;
+}
+
+.card-box{
+    display: none;
+}
+.skill-box:hover{
+    .project-image{
+        opacity: 0.1;
+    }
+    .card-box{
+        display: flex;
+        background-color: #000000bc;
+    }
+}
+
+
+/* .project-image */
