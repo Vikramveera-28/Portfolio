@@ -40,26 +40,30 @@ function App() {
 
 	
 	return (
-		<>
-			<Navbar />
-			<Home />
-			<About />
-			<Skills />
-			<Experience />
-			<Project />
-			<Contact
-				name = {name}
-				setName = {setName}
-				email = {email}
-				setEmail = {setEmail}
-				mobile = {mobile}
-				setMobile = {setMobile}
-				message = {message}
-				setMessage = {setMessage}
-				handleSubmit = {handleSubmit}
-			/>
-			<Footer />
-		</>
+		<Routes>
+			<Route path='/' element={
+			<>
+				<Navbar />
+				<Home />
+				<About />
+				<Skills />
+				<Experience />
+				<Project />
+				<Contact
+					name = {name}
+					setName = {setName}
+					email = {email}
+					setEmail = {setEmail}
+					mobile = {mobile}
+					setMobile = {setMobile}
+					message = {message}
+					setMessage = {setMessage}
+					handleSubmit = {handleSubmit}
+				/>
+				<Footer />
+			</>
+			}/>
+		</Routes>
 	)
 }
 
