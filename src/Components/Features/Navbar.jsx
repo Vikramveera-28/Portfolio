@@ -9,7 +9,7 @@ export const Navbar = () => {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavBar">
               <span className="navbar-toggler-icon"></span></button>
           <nav className="navbar-collapse collapse" id="myNavBar">
-              <ul className="navbar-nav gap-3">
+              <ul className="navbar-nav ms-auto gap-3">
                   <li className="nav-item"><a href="#" className="nav-link active">Home</a></li>
                   <li className="nav-item"><a href="#about" className="nav-link">About</a></li>
                   <li className="nav-item"><a href="#skills" className="nav-link">Skills</a></li>

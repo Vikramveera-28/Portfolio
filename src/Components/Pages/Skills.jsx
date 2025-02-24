@@ -100,12 +100,12 @@ export const Skills = () => {
                 const [key, value] = Object.entries(category)[0];
                 return(
                   <div key={index} className="row col-12 my-5 text-center">
-                  <h1 className="display-6 col-12 lead text-warning mb-5">{key}</h1>
-                  {value.map((skill) => (
-                    <div key={skill.id} className="col-12 col-sm-6 col-md-4 skill-box">
-                      <img src={skill.image} className='my-3 skill-icon' width="90px" height="90px" alt={skill.name} />
-                    </div>
-                  ))}
+                    <h1 className="display-6 col-12 lead text-warning mb-5">{key}</h1>
+                    {value.map((skill) => (
+                      <div key={skill.id} className="col-6 col-sm-6 col-md-4 skill-box">
+                        <img src={skill.image} className='my-3 skill-icon' width="90px" height="90px" alt={skill.name} />
+                      </div>
+                    ))}
                   </div>
                 )
               })}

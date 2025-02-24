@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const Contact = ({name, setName, email, setEmail, mobile, setMobile, message, setMessage, handleSubmit}) => {
+export const Contact = ({name, setName, email, setEmail, mobile, setMobile, message, setMessage, fillError, handleSubmit}) => {
   return (
     <section className="container-fluid row page-5 pt-5" id="contact">
       <div className="row col-8 offset-2 contactPage">
@@ -24,6 +24,7 @@ export const Contact = ({name, setName, email, setEmail, mobile, setMobile, mess
                   <div className="modal-body">
                       <form action="">
                         <div className="row">
+                            {fillError && <span className='text-danger'>Fill the Space</span>}
                             <div className="col-12 my-2">
                                 <label htmlFor="userName" className="form-label">Name :</label>
                                 <input
@@ -69,8 +70,7 @@ export const Contact = ({name, setName, email, setEmail, mobile, setMobile, mess
                                 ></textarea>
                             </div>
                             <div className="col-12 my-2">
-                                <input type="reset" value="Reset" className="btn btn-danger w-50" />
-                                <input type="submit" value="Submit" onClick={handleSubmit} className="btn btn-primary w-50" />
+                                <input type="submit" value="Submit" onClick={handleSubmit} className="btn btn-primary w-100" />
                             </div>
                         </div>
                       </form>

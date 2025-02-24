@@ -10,10 +10,10 @@ html{
   color: blue;
 }
 .page-1{
-  width: 100vw;
+  /* width: 100vw; */
   background-image: linear-gradient(to bottom, white -90%,rgb(44, 44, 44) 30%, black 90%);
 }
-.page-2,
+/* .page-2,
 .page-3
 {
   width: 100vw;
@@ -25,14 +25,14 @@ html{
   width: 100vw;
   height: auto;
   padding-block: 100px;
-}
+} */
 .img{
   filter: drop-shadow('5px');
 }
-header > nav > ul{
+/* header > nav > ul{
   margin-left: auto;
   font-size: 20px;
-}
+} */
 main{
   /* width: 100vw; */
   padding-bottom: 100px;
@@ -217,7 +217,7 @@ main{
   mix-blend-mode: difference;
 }
 
-.card-box{
+/* .card-box{
   display: none;
 }
 .skill-box:hover{
@@ -228,4 +228,4 @@ main{
       display: flex;
       background-color: #000000bc;
   }
-}
+} */

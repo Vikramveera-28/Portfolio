@@ -15,27 +15,29 @@ function App() {
     const [email, setEmail] = useState('')
     const [mobile, setMobile] = useState()
     const [message, setMessage] = useState('')
-	const [post, setPost] = useState([
-		{
-			id : 1,
-			name : "Vikram Kumar",
-			email : "vikramkumaru28@gmail.com",
-			mobile : 9514945463,
-			message : "Recived"
-		}
-	])
+	const [fillError, setFillError] = useState(false)
+	const [post, setPost] = useState([])
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const Id = post.length ? Number(post[post.length - 1].id) + 1 : 1;
-		const Name = name;
-		const Email = email;
-		const Mobile = Number(mobile);
-		const Message = message;
-		const addPost = {id:Id, name:Name, email:Email, mobile:Mobile, message:Message}
-		const newPost = [...post, addPost]
-		setPost(newPost)
-		console.log(post);
+		setFillError(false)
+        if (name && email && mobile && message) {
+			const Id = post.length ? Number(post[post.length - 1].id) + 1 : 1;
+			const Name = name;
+			const Email = email;
+			const Mobile = Number(mobile);
+			const Message = message;
+			const addPost = {id:Id, name:Name, email:Email, mobile:Mobile, message:Message}
+			const newPost = [...post, addPost]
+			setPost(newPost)
+			localStorage.setItem('post', JSON.stringify(newPost))
+			setName('')
+			setEmail('')
+			setMobile('')
+			setMessage('')
+		} else {
+			setFillError(true)
+		}
     }
 
 	
@@ -58,6 +60,7 @@ function App() {
 					setMobile = {setMobile}
 					message = {message}
 					setMessage = {setMessage}
+					fillError = {fillError}
 					handleSubmit = {handleSubmit}
 				/>
 				<Footer />
